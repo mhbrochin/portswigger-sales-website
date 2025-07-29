@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PortSwigger - Web Security Experts</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-bolt"></i>
+                <span>PortSwigger</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#hero" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#landscape" class="nav-link">Digital Landscape</a></li>
+                <li class="nav-item"><a href="#dast" class="nav-link">DAST Solution</a></li>
+                <li class="nav-item"><a href="#advantage" class="nav-link">Our Advantage</a></li>
+                <li class="nav-item"><a href="#trust" class="nav-link">Trust & Results</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badges">
+                    <div class="badge bold">Swiggers be BOLD</div>
+                    <div class="badge defend">DEFEND PRO</div>
+                    <div class="badge together">Better Together</div>
+                    <div class="badge enterprise">Enterprise READY</div>
+                </div>
+                <h1 class="hero-title">Why PortSwigger</h1>
+                <p class="hero-subtitle">The world's leading web security platform trusted by 16,000+ organizations and 70,000+ users worldwide</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="scrollToSection('landscape')">Discover the Challenge</button>
+                    <button class="btn-secondary" onclick="scrollToSection('dast')">See Our Solution</button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="security-icons">
+                    <div class="security-icon brain"><i class="fas fa-brain"></i></div>
+                    <div class="security-icon shield"><i class="fas fa-shield-alt"></i></div>
+                    <div class="security-icon network"><i class="fas fa-network-wired"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="landscape" class="landscape">
+        <div class="container">
+            <h2 class="section-title">The Evolving Digital Landscape – Where Are We Now?</h2>
+            <div class="landscape-content">
+                <div class="landscape-text">
+                    <div class="key-point">
+                        <div class="key-point-icon">
+                            <i class="fas fa-globe-americas"></i>
+                        </div>
+                        <div class="key-point-content">
+                            <h3>The World is Now API-First</h3>
+                            <p>Modern web applications, from customer-facing portals to internal microservices, are increasingly built upon intricate networks of APIs (Application Programming Interfaces) and powered by sophisticated client-side JavaScript frameworks.</p>
+                        </div>
+                    </div>
+                    <div class="key-point">
+                        <div class="key-point-icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <div class="key-point-content">
+                            <h3>Expanded Attack Surface</h3>
+                            <p>This shift has revolutionised how applications function, making them dynamic and responsive. However, it also means that the attack surface for malicious actors has expanded dramatically. Many of these APIs, often used only by developers and other machines, are frequently overlooked by security teams, creating significant blind spots.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="landscape-visual">
+                    <div class="api-first-card">
+                        <h4>The World is Now API-First</h4>
+                        <p>Modern applications rely heavily on APIs for functionality.</p>
+                        <div class="understanding-api">
+                            <h5>Understanding the API Landscape</h5>
+                            <div class="risk-indicators">
+                                <div class="risk-item">
+                                    <span class="risk-label">INCREASING RISK</span>
+                                    <span class="risk-desc">APIs are often overlooked by security teams</span>
+                                </div>
+                                <div class="risk-item">
+                                    <span class="risk-label">DYNAMIC APPLICATIONS</span>
+                                    <span class="risk-desc">Applications have become more responsive and complex</span>
+                                </div>
+                                <div class="risk-item">
+                                    <span class="risk-label">MALICIOUS ATTACKS RISING</span>
+                                    <span class="risk-desc">The attack surface has expanded dramatically</span>
+                                </div>
+                            </div>
+                            <div class="secure-apis">
+                                <i class="fas fa-arrow-right"></i>
+                                <span>Secure your APIs from potential threats now</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="challenge" class="challenge">
+        <div class="container">
+            <h2 class="section-title">The Challenge of the Unseen – Navigating the New Attack Surface</h2>
+            <div class="challenge-grid">
+                <div class="challenge-card">
+                    <div class="challenge-icon">
+                        <i class="fas fa-eye-slash"></i>
+                    </div>
+                    <h3>Limited Visibility</h3>
+                    <p>Traditional security scanners struggle to test and gain comprehensive visibility into modern, JavaScript-driven applications and their underlying APIs.</p>
+                </div>
+                <div class="challenge-card">
+                    <div class="challenge-icon">
+                        <i class="fas fa-bug"></i>
+                    </div>
+                    <h3>Hidden Vulnerabilities</h3>
+                    <p>Organizations are often unaware of critical vulnerabilities that standard tools often miss because they don't produce obvious errors or system changes.</p>
+                </div>
+                <div class="challenge-card highlight">
+                    <div class="challenge-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3>High Cost Impact</h3>
+                    <div class="cost-highlight">$4.88M</div>
+                    <p>The consequences of these unseen vulnerabilities can be substantial, with the average cost of a data breach being $4.88M</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="dast" class="dast">
+        <div class="container">
+            <h2 class="section-title">Introducing DAST – Your Application's Real-World Shield</h2>
+            <div class="dast-content">
+                <div class="dast-explanation">
+                    <div class="dast-point">
+                        <div class="dast-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="dast-text">
+                            <h3>Essential Live Testing</h3>
+                            <p><strong>Dynamic Application Security Testing (DAST)</strong> is essential for securing live applications by actively scanning them and simulating real-world attacks. Unlike Static Application Security Testing (SAST), which examines code for potential flaws.</p>
+                        </div>
+                    </div>
+                    <div class="dast-point">
+                        <div class="dast-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="dast-text">
+                            <h3>Critical Vulnerability Detection</h3>
+                            <p>This is crucial for identifying business logic flaws, configuration issues, and other vulnerabilities that are only exploitable in a live environment and are typically missed by code-based analysis.</p>
+                        </div>
+                    </div>
+                    <div class="dast-point">
+                        <div class="dast-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="dast-text">
+                            <h3>Higher Accuracy</h3>
+                            <p>A key advantage of DAST is its higher accuracy and lower false positive rates compared to SAST, because it validates issues by interacting directly with the live application, confirming that a vulnerability is genuinely present and exploitable.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="advantage" class="advantage">
+        <div class="container">
+            <h2 class="section-title">The PortSwigger DAST Advantage – Intelligence Meets Automation</h2>
+            <div class="advantage-grid">
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3>Expert Emulation</h3>
+                    <p>Emulates the sophisticated techniques of an expert penetration tester using an engine designed by world-leading security researchers.</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Intelligent Crawling</h3>
+                    <p>Automatically navigates complex web applications by effortlessly handling obstacles like CSRF tokens, dynamic parameters, and stateful functionality.</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fab fa-chrome"></i>
+                    </div>
+                    <h3>Browser-Powered Scanning</h3>
+                    <p>Uses an embedded browser to execute JavaScript and render the DOM, discovering attack surfaces previously only accessible through manual testing.</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Comprehensive API Scanning</h3>
+                    <p>Natively scans APIs by parsing OpenAPI, SOAP, and Postman definitions, and uses introspection to map and test GraphQL APIs.</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <h3>Authenticated Access</h3>
+                    <p>Handles complex logins like SSO and multi-step forms using recorded or AI-generated sequences to ensure complete coverage of privileged areas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="oast" class="oast">
+        <div class="container">
+            <h2 class="section-title">Uncovering the Invisible – The Power of Burp Collaborator (OAST)</h2>
+            <div class="oast-content">
+                <div class="oast-features">
+                    <div class="oast-feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3>Pioneering OAST</h3>
+                        <p>Pioneered Out-of-band Application Security Testing (OAST) with Burp Collaborator to find critical vulnerabilities invisible to conventional scanners.</p>
+                    </div>
+                    <div class="oast-feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3>How it Works</h3>
+                        <p>Injects unique payloads that cause a vulnerable application to interact with an external server, confirming otherwise silent vulnerabilities via this out-of-band channel.</p>
+                    </div>
+                    <div class="oast-feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-crosshairs"></i>
+                        </div>
+                        <h3>Detects Critical Blind Vulnerabilities</h3>
+                        <p>Uncovers severe, frequently missed issues like blind SQL injection, blind Cross-Site Scripting (XSS), and blind OS command injection.</p>
+                    </div>
+                    <div class="oast-feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <h3>High Reliability</h3>
+                        <p>Increases scan coverage while producing an exceptionally low rate of false positives, providing high-confidence results.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="integration" class="integration">
+        <div class="container">
+            <h2 class="section-title">Integrating Security Seamlessly – From Code to Cloud</h2>
+            <div class="integration-features">
+                <div class="integration-feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-code-branch"></i>
+                    </div>
+                    <h3>Built for DevSecOps</h3>
+                    <p>Integrates directly into your CI/CD pipelines to "shift security left," enabling early vulnerability detection and remediation before code reaches production.</p>
+                </div>
+                <div class="integration-feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Tool-Agnostic Integration</h3>
+                    <p>Offers broad, native support for any CI/CD toolchain, including popular platforms like Jenkins, TeamCity, GitHub Actions, and GitLab.</p>
+                </div>
+                <div class="integration-feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-ticket-alt"></i>
+                    </div>
+                    <h3>Streamlined Remediation</h3>
+                    <p>Automates ticket creation in Jira, Trello, and GitLab—with detailed remediation advice—and sends alerts to Slack and Splunk to help developers fix issues fast.</p>
+                </div>
+                <div class="integration-feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-puzzle-piece"></i>
+                    </div>
+                    <h3>Customization and Extensibility</h3>
+                    <p>Tailor your scans with hundreds of community-built extensions from the BApp Store or by creating custom, code-free scan checks with BChecks.</p>
+                </div>
+            </div>
+            
+            <div class="scalability-section">
+                <h3>Scalability and Flexibility – Built for the Enterprise</h3>
+                <div class="deployment-options">
+                    <div class="deployment-option">
+                        <div class="option-icon"><i class="fas fa-cloud"></i></div>
+                        <h4>Cloud Instances</h4>
+                        <p>PortSwigger-hosted for scanning external web apps and APIs.</p>
+                    </div>
+                    <div class="deployment-option">
+                        <div class="option-icon"><i class="fas fa-server"></i></div>
+                        <h4>Self-Hosted Options</h4>
+                        <p>Deploy on-prem, in your cloud (AWS, Azure, GCP), or on Kubernetes for highly scalable, self-managed scanning.</p>
+                    </div>
+                    <div class="deployment-option">
+                        <div class="option-icon"><i class="fab fa-docker"></i></div>
+                        <h4>CI-Driven Scans</h4>
+                        <p>Run headless scans from a Docker container directly within your CI/CD pipeline for seamless integration.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="roi" class="roi">
+        <div class="container">
+            <h2 class="section-title">Quantifying the ROI – Measurable Impact on Your Security Posture</h2>
+            <div class="roi-benefits">
+                <div class="roi-benefit">
+                    <div class="roi-icon"><i class="fas fa-coins"></i></div>
+                    <span>Automating security testing reduces costs and optimizes resource allocation</span>
+                </div>
+                <div class="roi-benefit">
+                    <div class="roi-icon"><i class="fas fa-clock"></i></div>
+                    <span>Early bug detection accelerates development cycles and reduces rework</span>
+                </div>
+                <div class="roi-benefit">
+                    <div class="roi-icon"><i class="fas fa-shield-alt"></i></div>
+                    <span>Improved visibility enhances security posture and lowers breach risk</span>
+                </div>
+                <div class="roi-benefit">
+                    <div class="roi-icon"><i class="fas fa-code"></i></div>
+                    <span>Actionable feedback empowers developers to build secure code</span>
+                </div>
+                <div class="roi-benefit">
+                    <div class="roi-icon"><i class="fas fa-robot"></i></div>
+                    <span>AI integration boosts efficiency and accuracy in security testing</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="trust" class="trust">
+        <div class="container">
+            <h2 class="section-title">A Partner You Can Trust – The PortSwigger Commitment</h2>
+            <div class="trust-content">
+                <div class="trust-stats">
+                    <div class="trust-stat">
+                        <div class="stat-number">16,000+</div>
+                        <div class="stat-label">Organizations</div>
+                    </div>
+                    <div class="trust-stat">
+                        <div class="stat-number">70,000+</div>
+                        <div class="stat-label">Users Worldwide</div>
+                    </div>
+                    <div class="trust-stat">
+                        <div class="stat-number">Gold Standard</div>
+                        <div class="stat-label">For Penetration Testing</div>
+                    </div>
+                </div>
+                
+                <div class="trust-points">
+                    <div class="trust-point">
+                        <div class="trust-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3>Industry Standard</h3>
+                        <p>PortSwigger is a trusted name in web security, with Burp Suite being considered the "gold standard" for penetration testing.</p>
+                    </div>
+                    <div class="trust-point">
+                        <div class="trust-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>Continuous Innovation</h3>
+                        <p>PortSwigger is committed to pushing the boundaries of web security research, regularly unearthing new vulnerabilities and ensuring that Burp Scanner users are among the first to be protected against emerging threats.</p>
+                    </div>
+                    <div class="trust-point">
+                        <div class="trust-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Commitment to Education</h3>
+                        <p>Benefit from the Web Security Academy, a free and extensive resource that helps security professionals enhance their skills and effectively leverage Burp Suite products.</p>
+                    </div>
+                    <div class="trust-point">
+                        <div class="trust-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3>Reliable Results</h3>
+                        <p>Customers consistently highlight Burp Scanner's accuracy and its ability to find more vulnerabilities with fewer false positives, offering unparalleled reliability for your security testing needs.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="customer-testimonial">
+                <div class="testimonial-content">
+                    <div class="testimonial-text">
+                        <blockquote>
+                            "I want to just let you know this has been one of the best partnerships that I've seen in my career. So if you guys want me to write like an email to somebody, just tell me who and I will write you a glowing review because I appreciate this. Like, come on, man, this is. This is amazing. So thank you"
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <span class="author-name">Alijohn Ghassemlouei</span>
+                                <span class="author-title">Senior Director, Infrastructure Engineering</span>
+                                <div class="company-logo">SAP</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-stats">
+                        <div class="stat-item">
+                            <div class="stat-value">~95% faster</div>
+                            <div class="stat-desc">5K site installation</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">97%</div>
+                            <div class="stat-desc">Reduction in tech support cases for poor scan coverage</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="cta-title">Ready to Secure Your Applications?</h2>
+            <p class="cta-subtitle">Join thousands of security professionals who trust PortSwigger to protect their web applications</p>
+            <div class="cta-buttons">
+                <button class="btn-primary-large">Start Free Trial</button>
+                <button class="btn-secondary-large">Schedule Demo</button>
+                <button class="btn-secondary-large" onclick="showContactInfo()">Contact Sales</button>
+            </div>
+            
+            <div class="product-logos">
+                <div class="product-logo">
+                    <i class="fas fa-bolt"></i>
+                    <div class="logo-text">
+                        <span class="logo-name">BurpSuite</span>
+                        <span class="logo-type">Professional</span>
+                    </div>
+                </div>
+                <div class="product-logo">
+                    <i class="fas fa-bolt"></i>
+                    <div class="logo-text">
+                        <span class="logo-name">BurpSuite</span>
+                        <span class="logo-type">Enterprise Edition</span>
+                    </div>
+                </div>
+                <div class="product-logo">
+                    <i class="fas fa-bolt"></i>
+                    <div class="logo-text">
+                        <span class="logo-name">PortSwigger</span>
+                        <span class="logo-type">Research</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-bolt"></i>
+                        <span>PortSwigger</span>
+                    </div>
+                    <p>Leading the way in web application security</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="#">Burp Suite Professional</a></li>
+                        <li><a href="#">Burp Suite Enterprise</a></li>
+                        <li><a href="#">Web Security Academy</a></li>
+                        <li><a href="#">PortSwigger Research</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Research</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 PortSwigger Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
